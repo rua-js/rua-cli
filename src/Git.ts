@@ -10,8 +10,8 @@ class Git {
 
   public static commit(commitMessage: string = 'rua-cli'): void {
     Git.addAll()
-    const commit = spawnSync('git', ['commit' ,'-m', `"${commitMessage}"`])
-    console.log(chalk.green(`[OK] Git Commit "${commitMessage}"`))
+    const commit = spawnSync('git', ['commit' ,'-m', `${commitMessage}`])
+    console.log(chalk.green(`[OK] Git Commit ${commitMessage}`))
   }
   
   public static push(commitMessage: string = 'rua-cli'): void {
