@@ -4,7 +4,7 @@
 // Dependency
 const terminal = require('commander'),
       chalk = require('chalk'),
-      git = require('../lib/Git').default,
+      Git = require('../lib/Git').default,
       _ = require('lodash'),
       { spawnSync } = require('child_process')
 
@@ -18,7 +18,7 @@ terminal
 const defaultCommitMessage = terminal.args.join(' ') || _.get(settings, 'commitMessage')
 
 try {
-  git.push(defaultCommitMessage)
+  Git.push(defaultCommitMessage)
 } catch (e) {
   console.log(chalk.red('[Rua-Cli] An Error Occurred!'))
   throw e
