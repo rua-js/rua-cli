@@ -14,12 +14,18 @@ class Git {
   public static commit(commitMessage: string = 'rua-cli'): void {
     Git.addAll()
     const commit = spawnSync('git', ['commit' ,'-m', `${commitMessage}`])
+    if (commit.error instanceof Error) {
+      throw commit.error
+    }
     console.log(chalk.green(`[OK] Git Commit ${commitMessage}`))
   }
   
   public static push(commitMessage: string = 'rua-cli'): void {
     Git.commit(commitMessage)
-    const commit = spawnSync('git', ['push'])
+    const push = spawnSync('git', ['push'])
+    if (push.error instanceof Error) {
+      throw push.error
+    }
     console.log(chalk.green(`[OK] Git Push`))
   }
 }
