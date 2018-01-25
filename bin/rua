@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict'
+
+// Dependency
+const terminal = require('commander')
+const chalk = require('chalk')
+
+// Settings / Variables
+const version = 'v' + require('../package').version
+const commandName = chalk.green
+
+terminal
+  .version(version, '-v, --version')
+  .usage('<command> [options]')
+  .on('--help', printHelp)
+  .parse(process.argv)
+
+function printHelp() {
+  console.log()
+  console.log('  Commands:(!!!need redo)')
+  console.log()
+  console.log(`    ${commandName('push')}           Init a new dva application in the current folder`)
+  console.log(`    ${commandName('new')}            Creates a new application`)
+  console.log(`    ${commandName('generate')}       Generates new code (short-cut alias: "g")`)
+  console.log()
+  console.log('  All commands can be run with -h (or --help) for more information.')
+}

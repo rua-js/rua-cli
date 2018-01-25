@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict'
+
+// Dependency
+const terminal = require('commander'),
+      chalk = require('chalk'),
+      git = require('../lib/Git').default,
+      _ = require('lodash'),
+      { spawnSync } = require('child_process')
+
+// Settings / Variables
+const settings = require('../package').rua
+
+terminal
+  .usage('[commit message]')
+  .parse(process.argv)
+
+const defaultCommitMessage = terminal.args.join(' ') || _.get(settings, 'commitMessage')
+
+git.commit(defaultCommitMessage)
