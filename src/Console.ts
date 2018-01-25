@@ -31,10 +31,10 @@ class Console {
     )
   }
 
-  public static done(text: string = 'Operation Is Ended'): void {
+  public static end(text: string = 'Operation Is Ended'): void {
     console.log(
       '[',
-      chalk.cyanBright('DONE'),
+      chalk.cyanBright('END'),
       ']',
       '-',
       chalk.cyanBright(text),

@@ -25,4 +25,4 @@ try {
   throw e
 }
 
-Console.done()
+Console.end()
