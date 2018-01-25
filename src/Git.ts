@@ -27,8 +27,6 @@ class Git {
     } else {
       Console.ok(`Git Commit: "${commitMessage}"`)
     }
-    // console.log(commit)
-    console.log(chalk.green(`[OK] Git Commit "${commitMessage}"`))
   }
 
   public static push(commitMessage: string = 'rua-cli'): void {
@@ -43,7 +41,6 @@ class Git {
     } else {
       Console.ok('Git Push')
     }
-    console.log(chalk.green(`[OK] Git Push`))
   }
 }
 
