@@ -6,6 +6,7 @@ class Console {
       '[',
       chalk.green('OK'),
       ']',
+      '-',
       text,
     )
   }
