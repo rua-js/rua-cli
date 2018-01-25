@@ -17,7 +17,7 @@ class Git {
     if (commit.error instanceof Error) {
       throw commit.error
     }
-    console.log(chalk.green(`[OK] Git Commit ${commitMessage}`))
+    console.log(chalk.green(`[OK] Git Commit "${commitMessage}"`))
   }
   
   public static push(commitMessage: string = 'rua-cli'): void {
