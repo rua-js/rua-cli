@@ -6,7 +6,8 @@ const terminal = require('commander'),
       chalk = require('chalk'),
       Git = require('../lib/Git').default,
       _ = require('lodash'),
-      { spawnSync } = require('child_process')
+      { spawnSync } = require('child_process'),
+      Console = require('../lib/Console')
 
 // Settings / Variables
 const settings = require('../package').rua
@@ -23,3 +24,5 @@ try {
   console.log(chalk.red('[Rua-Cli] An Error Occurred!'))
   throw e
 }
+
+Console.done()

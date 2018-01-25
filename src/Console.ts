@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 
 class Console {
-  public static ok(text: string): void {
+  public static ok(text: string = 'Normal'): void {
     console.log(
       '[',
       chalk.green('OK'),
@@ -11,7 +11,7 @@ class Console {
     )
   }
 
-  public static err(text: string): void {
+  public static err(text: string = 'An Error Occurred'): void {
     console.log(
       '[',
       chalk.red('ERROR'),
@@ -21,7 +21,7 @@ class Console {
     )
   }
 
-  public static warn(text: string): void {
+  public static warn(text: string = 'An Warning Occurred'): void {
     console.log(
       '[',
       chalk.yellow('WARNING'),
@@ -31,9 +31,13 @@ class Console {
     )
   }
 
-  public static done(text: string): void {
+  public static done(text: string = 'Operation Is Ended'): void {
     console.log(
-
+      '[',
+      chalk.blue('DONE'),
+      ']',
+      '-',
+      chalk.blue(text),
     )
   }
 }
