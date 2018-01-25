@@ -5,6 +5,7 @@ import chalk from 'chalk'
 class Git {
   public static addAll(): void {
     const addAll = spawnSync('git', ['add', '--all'])
+    console.log(addAll)
     console.log(chalk.green('[OK] Git Add'))
   }
 
