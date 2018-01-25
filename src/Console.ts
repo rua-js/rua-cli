@@ -11,10 +11,20 @@ class Console {
     )
   }
 
-  public static error(text: string): void {
+  public static err(text: string): void {
     console.log(
       '[',
-      chalk.green('OK'),
+      chalk.green('ERROR'),
+      ']',
+      '-',
+      text,
+    )
+  }
+
+  public static warn(text: string): void {
+    console.log(
+      '[',
+      chalk.green('WARNING'),
       ']',
       '-',
       text,

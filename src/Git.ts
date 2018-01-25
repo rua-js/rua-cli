@@ -9,6 +9,7 @@ class Git {
     if (cmd.error instanceof Error) {
       throw cmd.error
     } else if (cmd.status !== 0) {
+      Console.warn('Git Add, no error but not succeed')
     } else {
       Console.ok('Git Add')
     }
