@@ -18,9 +18,14 @@ class Git {
 
   public static commit(commitMessage: string = 'rua-cli'): void {
     Git.addAll()
-    const commit = spawnSync('git', ['commit', '-m', `${commitMessage}`])
-    if (commit.error instanceof Error) {
-      throw commit.error
+    const cmd = spawnSync('git', ['commit', '-m', `${commitMessage}`])
+    if (cmd.error instanceof Error) {
+      Console.err('Git Commit')
+      throw cmd.error
+    } else if (cmd.status !== 0) {
+      Console.warn('Git Commit, no error but not succeed')
+    } else {
+      Console.ok(`Git Commit: "${commitMessage}"`)
     }
     // console.log(commit)
     console.log(chalk.green(`[OK] Git Commit "${commitMessage}"`))
@@ -28,10 +33,15 @@ class Git {
 
   public static push(commitMessage: string = 'rua-cli'): void {
     Git.commit(commitMessage)
-    const push = spawnSync('git', ['push'])
+    const cmd = spawnSync('git', ['push'])
     // console.log(push)
-    if (push.error instanceof Error) {
-      throw push.error
+    if (cmd.error instanceof Error) {
+      Console.err('Git Push')
+      throw cmd.error
+    } else if (cmd.status !== 0) {
+      Console.warn('Git Push, no error but not succeed')
+    } else {
+      Console.ok('Git Push')
     }
     console.log(chalk.green(`[OK] Git Push`))
   }
