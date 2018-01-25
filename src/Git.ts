@@ -7,6 +7,7 @@ class Git {
   public static addAll(): void {
     const cmd = spawnSync('git', ['add', '--all'])
     if (cmd.error instanceof Error) {
+      Console.err('Git Add')
       throw cmd.error
     } else if (cmd.status !== 0) {
       Console.warn('Git Add, no error but not succeed')
