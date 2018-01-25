@@ -18,11 +18,6 @@ terminal
 
 const defaultCommitMessage = terminal.args.join(' ') || _.get(settings, 'commitMessage')
 
-try {
-  Git.commit(defaultCommitMessage)
-} catch (e) {
-  console.log(chalk.red('[Rua-Cli] An Error Occurred!'))
-  throw e
-}
+Git.commit(defaultCommitMessage)
 
 Console.end()
