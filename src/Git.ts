@@ -17,6 +17,7 @@ class Git {
   public static push(commitMessage: string = 'rua-cli'): void {
     Git.commit(commitMessage)
     const commit = spawnSync('git', ['push'])
+    console.log(chalk.green(`[OK] Git Push`))
   }
 }
 
