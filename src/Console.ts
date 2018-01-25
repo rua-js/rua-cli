@@ -17,7 +17,7 @@ class Console {
       chalk.red('ERROR'),
       ']',
       '-',
-      text,
+      chalk.red(text),
     )
   }
 
@@ -27,7 +27,7 @@ class Console {
       chalk.yellow('WARNING'),
       ']',
       '-',
-      text,
+      chalk.yellow(text),
     )
   }
 
