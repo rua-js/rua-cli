@@ -1,0 +1,14 @@
+# ide
+.idea/
+
+# macOS
+.DS_Store
+
+# test
+coverage/
+
+# compiled files
+lib/
+
+# node
+node_modules/

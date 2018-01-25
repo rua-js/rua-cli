@@ -1,0 +1,50 @@
+{
+  "name": "rua-cli",
+  "version": "0.0.1",
+  "description": "An elegant command line utility",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies-new!!!": {
+    "ansi-styles": "^3.2.0",
+    "chalk": "^2.3.0",
+    "color-convert": "^1.9.1",
+    "color-name": "^1.1.3",
+    "commander": "^2.13.0",
+    "escape-string-regexp": "^1.0.5",
+    "fs-extra": "^5.0.0",
+    "graceful-fs": "^4.1.11",
+    "has-flag": "^2.0.0",
+    "jsonfile": "^4.0.0",
+    "left-pad": "^1.2.0",
+    "supports-color": "^4.5.0",
+    "universalify": "^0.1.1"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.13.0",
+    "fs-extra": "^5.0.0",
+    "left-pad": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rua-js/rua-cli.git"
+  },
+  "keywords": [
+    "rua",
+    "rua.js",
+    "cli",
+    "rua-cli"
+  ],
+  "author": "copydog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rua-js/rua-cli/issues"
+  },
+  "homepage": "https://github.com/rua-js/rua-cli#readme"
+}
