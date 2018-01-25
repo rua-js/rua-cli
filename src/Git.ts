@@ -1,6 +1,7 @@
 // @ts-ignore: node.js module
 import { spawnSync } from 'child_process'
 import chalk from 'chalk'
+import Console from './Console'
 
 class Git {
   public static addAll(): void {
@@ -8,9 +9,9 @@ class Git {
     if (cmd.error instanceof Error) {
       throw cmd.error
     } else if (cmd.status !== 0) {
-
-    } else
-    console.log(chalk.green('[OK] Git Add'))
+    } else {
+      Console.ok('Git Add')
+    }
   }
 
   public static commit(commitMessage: string = 'rua-cli'): void {
