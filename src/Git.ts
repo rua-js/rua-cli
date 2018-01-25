@@ -17,13 +17,14 @@ class Git {
     if (commit.error instanceof Error) {
       throw commit.error
     }
+    console.log(commit)
     console.log(chalk.green(`[OK] Git Commit "${commitMessage}"`))
   }
   
   public static push(commitMessage: string = 'rua-cli'): void {
     Git.commit(commitMessage)
     const push = spawnSync('git', ['push'])
-    console.log(push)
+    // console.log(push)
     if (push.error instanceof Error) {
       throw push.error
     }
