@@ -10,6 +10,16 @@ class Console {
       text,
     )
   }
+
+  public static error(text: string): void {
+    console.log(
+      '[',
+      chalk.green('OK'),
+      ']',
+      '-',
+      text,
+    )
+  }
 }
 
 export default Console
