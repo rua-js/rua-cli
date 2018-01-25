@@ -23,6 +23,7 @@ class Git {
   public static push(commitMessage: string = 'rua-cli'): void {
     Git.commit(commitMessage)
     const push = spawnSync('git', ['push'])
+    console.log(push)
     if (push.error instanceof Error) {
       throw push.error
     }
