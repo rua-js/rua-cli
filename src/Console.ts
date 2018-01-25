@@ -14,7 +14,7 @@ class Console {
   public static err(text: string): void {
     console.log(
       '[',
-      chalk.green('ERROR'),
+      chalk.red('ERROR'),
       ']',
       '-',
       text,
@@ -24,7 +24,7 @@ class Console {
   public static warn(text: string): void {
     console.log(
       '[',
-      chalk.green('WARNING'),
+      chalk.yellow('WARNING'),
       ']',
       '-',
       text,
