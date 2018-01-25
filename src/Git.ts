@@ -4,8 +4,10 @@ import chalk from 'chalk'
 
 class Git {
   public static addAll(): void {
-    const addAll = spawnSync('gitaa', ['add', '--all'])
-    console.log(addAll.error instanceof Error)
+    const addAll = spawnSync('git', ['add', '--all'])
+    if (addAll.error instanceof Error) {
+      throw addAll.error
+    }
     console.log(chalk.green('[OK] Git Add'))
   }
 
