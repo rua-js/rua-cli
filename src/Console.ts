@@ -34,10 +34,10 @@ class Console {
   public static done(text: string = 'Operation Is Ended'): void {
     console.log(
       '[',
-      chalk.blueBright('DONE'),
+      chalk.cyanBright('DONE'),
       ']',
       '-',
-      chalk.blueBright(text),
+      chalk.cyanBright(text),
     )
   }
 }
