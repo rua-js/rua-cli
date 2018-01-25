@@ -17,11 +17,12 @@ terminal
 
 function printHelp() {
   console.log()
-  console.log('  Commands:(!!!need redo)')
+  console.log(`  ${chalk.yellow('Commands:')}`)
   console.log()
-  console.log(`    ${commandName('push')}           Init a new dva application in the current folder`)
-  console.log(`    ${commandName('new')}            Creates a new application`)
-  console.log(`    ${commandName('generate')}       Generates new code (short-cut alias: "g")`)
+  console.log(`    ${chalk.green('new')}            Creates a new rua application`)
+  console.log(`    ${chalk.green('init')}           Init a new rua application in the current react project`)
+  console.log(`    ${chalk.green('commit')}         Quick git commit which adds all changed files`)
+  console.log(`    ${chalk.green('push')}           Quick git push which adds all changed files`)
   console.log()
   console.log('  All commands can be run with -h (or --help) for more information.')
 }

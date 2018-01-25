@@ -17,7 +17,7 @@ class Git {
     if (commit.error instanceof Error) {
       throw commit.error
     }
-    console.log(commit) //
+    console.log(commit)
     console.log(chalk.green(`[OK] Git Commit "${commitMessage}"`))
   }
   
