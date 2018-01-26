@@ -31,7 +31,7 @@ class Console {
     )
   }
 
-  public static end(text: string = 'Operation Is Ended'): void {
+  public static end(text: string = 'Finished'): void {
     console.log(
       '[',
       chalk.cyanBright('END'),
