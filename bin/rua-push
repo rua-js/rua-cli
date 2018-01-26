@@ -4,9 +4,10 @@
 // Dependency
 const terminal = require('commander'),
       chalk = require('chalk'),
-      Git = require('../lib/Git').default,
       _ = require('lodash'),
-      { spawnSync } = require('child_process')
+      { spawnSync } = require('child_process'),
+      Git = require('../lib/Git').default,
+      Console = require('../lib/Console').default
 
 // Settings / Variables
 const settings = require('../package').rua
