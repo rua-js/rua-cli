@@ -7,7 +7,7 @@ class Console {
       chalk.green('OK'),
       ']',
       '-',
-      text,
+      chalk.green(text),
     )
   }
 
