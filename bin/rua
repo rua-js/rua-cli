@@ -23,6 +23,7 @@ function printHelp() {
   console.log(`    ${chalk.green('init')}           Init a new rua application in the current react project`)
   console.log(`    ${chalk.green('commit')}         Quick git commit which adds all changed files`)
   console.log(`    ${chalk.green('push')}           Quick git push which adds all changed files`)
+  console.log(`    ${chalk.green('package:init')}   Init package settings in current folder`)
   console.log()
   console.log('  All commands can be run with -h (or --help) for more information.')
 }
